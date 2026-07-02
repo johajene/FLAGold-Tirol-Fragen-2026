@@ -58,6 +58,10 @@
         <span class="mode-title">Statistik</span>
         <span class="mode-desc">Fortschritt, Quote und Prüfungsversuche.</span>
       </button>
+      <button class="mode-card" data-action="catalog">
+        <span class="mode-title">Fragenkatalog</span>
+        <span class="mode-desc">Alle Fragen mit richtiger Antwort durchsuchen.</span>
+      </button>
     </section>
 
     <section class="card compact">
@@ -136,6 +140,25 @@
       <p class="muted">Löscht Statistik, Prüfungsversuche und Fehlerliste aus diesem Browser.</p>
       <button id="resetBtn" class="danger">Fortschritt löschen</button>
     </section>
+  </template>
+
+
+  <template id="catalogTemplate">
+    <section class="card">
+      <p class="eyebrow">Nachschlagen</p>
+      <h2>Fragenkatalog</h2>
+      <p class="muted">Alle Fragen mit der jeweils richtigen Antwort. Du kannst nach Begriffen, Antworten oder Fragennummern suchen.</p>
+      <div class="search-row">
+        <input id="catalogSearch" class="search-input" type="search" placeholder="Suche, z. B. Atemschutz, 8, Warntafel ..." autocomplete="off">
+        <button id="clearSearchBtn" class="secondary">Löschen</button>
+      </div>
+      <div class="catalog-toolbar">
+        <span id="catalogCount" class="muted"></span>
+        <button id="scrollTopBtn" class="ghost">Nach oben</button>
+      </div>
+    </section>
+
+    <section id="catalogList" class="catalog-list"></section>
   </template>
 
   <script src="app.js" defer></script>

@@ -76,6 +76,7 @@ function showHome() {
       if (action === "exam") startExam();
       if (action === "mistakes") startMistakes();
       if (action === "stats") showStats();
+      if (action === "catalog") showCatalog();
     });
   });
 }
@@ -303,6 +304,106 @@ function finishSession() {
     else startPractice();
   });
   screen.querySelector("[data-action='home']").addEventListener("click", showHome);
+}
+
+
+function showCatalog() {
+  appState.screen = "catalog";
+  pageTitle.textContent = "Fragenkatalog";
+  backBtn.classList.remove("hidden");
+  screen.replaceChildren(document.importNode($("#catalogTemplate").content, true));
+
+  const input = $("#catalogSearch");
+  const clearBtn = $("#clearSearchBtn");
+  const scrollTopBtn = $("#scrollTopBtn");
+
+  const render = () => renderCatalog(input.value);
+  input.addEventListener("input", render);
+  clearBtn.addEventListener("click", () => {
+    input.value = "";
+    render();
+    input.focus();
+  });
+  scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+  renderCatalog("");
+}
+
+function renderCatalog(query) {
+  const list = $("#catalogList");
+  const count = $("#catalogCount");
+  const normalized = normalizeSearch(query);
+  const terms = normalized.split(" ").filter(Boolean);
+
+  const matches = appState.questions.filter((q) => {
+    if (!terms.length) return true;
+    const haystack = normalizeSearch(`${q.id} ${q.question} ${q.correctAnswer}`);
+    return terms.every((term) => haystack.includes(term));
+  });
+
+  count.textContent = `${matches.length} von ${appState.questions.length} Fragen`;
+  list.innerHTML = "";
+
+  if (!matches.length) {
+    const empty = document.createElement("div");
+    empty.className = "empty-state";
+    empty.textContent = "Keine passende Frage gefunden.";
+    list.appendChild(empty);
+    return;
+  }
+
+  const fragment = document.createDocumentFragment();
+
+  matches.forEach((q) => {
+    const details = document.createElement("details");
+    details.className = "catalog-item";
+
+    const summary = document.createElement("summary");
+    summary.innerHTML = `
+      <div class="catalog-question-head">
+        <span class="catalog-number">#${escapeHtml(String(q.id))}</span>
+        <span class="catalog-question">${highlightText(q.question, terms)}</span>
+      </div>
+    `;
+
+    const answer = document.createElement("div");
+    answer.className = "catalog-answer";
+    answer.innerHTML = `<strong>Richtige Antwort:</strong><br>${highlightText(q.correctAnswer, terms)}`;
+
+    details.appendChild(summary);
+    details.appendChild(answer);
+    fragment.appendChild(details);
+  });
+
+  list.appendChild(fragment);
+}
+
+function normalizeSearch(value) {
+  return String(value)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ß/g, "ss")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function highlightText(value, terms) {
+  let safe = escapeHtml(value);
+  if (!terms.length) return safe;
+
+  const rawTerms = [...new Set(terms)]
+    .filter((term) => term.length >= 2)
+    .map(escapeRegex);
+
+  if (!rawTerms.length) return safe;
+
+  const regex = new RegExp(`(${rawTerms.join("|")})`, "gi");
+  return safe.replace(regex, "<mark>$1</mark>");
+}
+
+function escapeRegex(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 function showStats() {

@@ -1,4 +1,4 @@
-const CACHE_NAME = "feuerwehr-lernapp-v2";
+const CACHE_NAME = "feuerwehr-lernapp-v3";
 const ASSETS = [
   "./",
   "./index.html",

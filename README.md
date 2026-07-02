@@ -9,6 +9,7 @@ Offline-fähige Browser-LernApp für die Multiple-Choice-Fragen aus dem Feuerweh
 - 1 Punkt pro Frage
 - bestanden ab 80 % bzw. 24 von 30 Punkten
 - Fehlertraining mit automatisch geführter Fehlerliste
+- Fragenkatalog zum schnellen Nachschlagen
 - Antworten werden bei jeder Frage neu gemischt
 - lokaler Fortschritt über den Browser-Speicher
 - PWA-Dateien für Nutzung am iPhone/Smartphone
