@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#b91c1c">
+  <meta name="description" content="Offline-fähige LernApp für Feuerwehr-Multiple-Choice-Fragen">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="FW Lernen">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Feuerwehr LernApp</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button id="backBtn" class="icon-btn hidden" aria-label="Zurück">←</button>
+      <div>
+        <p class="eyebrow">Feuerwehrwesen</p>
+        <h1 id="pageTitle">LernApp</h1>
+      </div>
+      <button id="menuBtn" class="icon-btn" aria-label="Startseite">⌂</button>
+    </header>
+
+    <main id="screen" class="screen" aria-live="polite"></main>
+  </div>
+
+  <template id="homeTemplate">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Multiple Choice · offline-fähig</p>
+        <h2>300 Fragen trainieren</h2>
+        <p class="muted">Übungsmodus, Prüfung mit 30 Zufallsfragen und gezieltes Fehlertraining.</p>
+      </div>
+      <div class="stat-pill">
+        <span id="homeAnswered">0</span>
+        <small>beantwortet</small>
+      </div>
+    </section>
+
+    <section class="grid">
+      <button class="mode-card" data-action="practice">
+        <span class="mode-title">Übungsmodus</span>
+        <span class="mode-desc">Sofortige Rückmeldung nach jeder Antwort.</span>
+      </button>
+      <button class="mode-card" data-action="exam">
+        <span class="mode-title">Prüfungsmodus</span>
+        <span class="mode-desc">30 zufällige Fragen · bestanden ab 80 %.</span>
+      </button>
+      <button class="mode-card" data-action="mistakes">
+        <span class="mode-title">Fehlertraining</span>
+        <span class="mode-desc"><span id="mistakeCount">0</span> Fragen auf der Fehlerliste.</span>
+      </button>
+      <button class="mode-card" data-action="stats">
+        <span class="mode-title">Statistik</span>
+        <span class="mode-desc">Fortschritt, Quote und Prüfungsversuche.</span>
+      </button>
+    </section>
+
+    <section class="card compact">
+      <h3>Hinweis</h3>
+      <p class="muted">Die Antworten werden bei jeder Frage neu gemischt. Dein Fortschritt wird nur lokal in diesem Browser gespeichert.</p>
+    </section>
+  </template>
+
+  <template id="quizTemplate">
+    <section class="quiz-shell">
+      <div class="quiz-meta">
+        <span id="modeBadge" class="badge"></span>
+        <span id="counter" class="muted"></span>
+      </div>
+
+      <div class="progress" aria-hidden="true">
+        <div id="progressBar"></div>
+      </div>
+
+      <article class="card question-card">
+        <p id="questionNumber" class="eyebrow"></p>
+        <h2 id="questionText"></h2>
+      </article>
+
+      <section id="options" class="options" aria-label="Antwortmöglichkeiten"></section>
+
+      <section id="feedback" class="feedback hidden"></section>
+
+      <div class="actions">
+        <button id="nextBtn" class="primary hidden">Weiter</button>
+        <button id="finishBtn" class="secondary hidden">Auswertung</button>
+      </div>
+    </section>
+  </template>
+
+  <template id="resultTemplate">
+    <section class="card result-card">
+      <p class="eyebrow" id="resultMode"></p>
+      <h2 id="resultTitle"></h2>
+      <div class="score-circle">
+        <strong id="resultPercent"></strong>
+        <span id="resultScore"></span>
+      </div>
+      <p id="resultText" class="muted"></p>
+      <div class="actions stacked">
+        <button class="primary" data-action="repeat-wrong">Falsche Fragen üben</button>
+        <button class="secondary" data-action="restart">Nochmal starten</button>
+        <button class="ghost" data-action="home">Zur Startseite</button>
+      </div>
+    </section>
+  </template>
+
+  <template id="statsTemplate">
+    <section class="card">
+      <h2>Statistik</h2>
+      <div class="stats-grid">
+        <div><strong id="statsAnswered">0</strong><span>Fragen beantwortet</span></div>
+        <div><strong id="statsCorrectRate">0 %</strong><span>Richtig-Quote</span></div>
+        <div><strong id="statsMistakes">0</strong><span>Fehlerliste</span></div>
+        <div><strong id="statsExams">0</strong><span>Prüfungen</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Letzte Prüfungen</h3>
+      <div id="examHistory" class="history muted">Noch keine Prüfungen durchgeführt.</div>
+    </section>
+
+    <section class="card">
+      <h3>Fehlerliste</h3>
+      <div id="mistakeList" class="mistake-list muted">Keine Fragen auf der Fehlerliste.</div>
+    </section>
+
+    <section class="card danger-zone">
+      <h3>Daten zurücksetzen</h3>
+      <p class="muted">Löscht Statistik, Prüfungsversuche und Fehlerliste aus diesem Browser.</p>
+      <button id="resetBtn" class="danger">Fortschritt löschen</button>
+    </section>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
