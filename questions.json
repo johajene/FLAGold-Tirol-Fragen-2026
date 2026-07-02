@@ -100,14 +100,14 @@
         },
         {
           "id": "8",
-          "question": "Welcher Gruppe der Atemgifte kann Kohlendioxid zugeteilt werden?",
+          "question": "WWelcher Gefahrstoff ist bei Einsätzen in Kellern oder Silos für Einsatzkräfte eine unsichtbare und besonders gefährliche Gefahr?",
           "options": [
-            "In die Gruppe der erstickend wirkenden Gase.",
-            "In die Gruppe der Reiz- und Ätzgase.",
-            "In die Gruppe der brennbaren Atemgifte.",
-            "In die Gruppe der Blut- und Nervengifte."
+            "Kohlenstoffdioxid: Es ist schwerer als Luft, sammelt sich am Boden und verdrängt den lebenswichtigen Sauerstoff.",
+            "Kohlenmonoxid: Es ist schwerer als Luft, sammelt sich ausschließlich am Boden und ist vor allem durch seinen stechenden Geruch erkennbar.",
+            "Methan: Es ist schwerer als Luft, sammelt sich in Bodennähe und verdrängt dort hauptsächlich den Sauerstoff.",
+            "Sauerstoff: Er sammelt sich in Kellern und Silos am Boden und führt dort durch Sauerstoffverdrängung zu Erstickungsgefahr."
           ],
-          "correctAnswer": "In die Gruppe der erstickend wirkenden Gase.",
+          "correctAnswer": "Kohlenstoffdioxid: Es ist schwerer als Luft, sammelt sich am Boden und verdrängt den lebenswichtigen Sauerstoff.",
           "explanation": " ",
           "points": 1
         },
