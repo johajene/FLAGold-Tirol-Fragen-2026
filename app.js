@@ -68,6 +68,7 @@ function showHome() {
   const summary = getSummary();
   $("#homeAnswered").textContent = summary.answeredQuestions;
   $("#mistakeCount").textContent = appState.progress.mistakes.length;
+  $("#homeQuestionTotal").textContent = appState.questions.length;
 
   screen.querySelectorAll("[data-action]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -152,6 +153,7 @@ function showQuiz() {
   $("#progressBar").style.width = `${(session.index / session.questions.length) * 100}%`;
   $("#questionNumber").textContent = `Frage ${question.id}`;
   $("#questionText").textContent = question.question;
+  renderQuestionImage(question, $(".question-card"));
 
   session.currentOptions = shuffle([...question.options]);
   session.locked = false;
@@ -307,6 +309,36 @@ function finishSession() {
 }
 
 
+
+function renderQuestionImage(question, container) {
+  if (!question.image || !question.image.src || !container) return;
+
+  const figure = document.createElement("figure");
+  figure.className = "question-image";
+
+  const img = document.createElement("img");
+  img.src = question.image.src;
+  img.alt = question.image.alt || "Abbildung zur Frage";
+  img.loading = "lazy";
+
+  figure.appendChild(img);
+  container.appendChild(figure);
+}
+
+function createCatalogImage(question) {
+  const figure = document.createElement("figure");
+  figure.className = "catalog-image";
+
+  const img = document.createElement("img");
+  img.src = question.image.src;
+  img.alt = question.image.alt || "Abbildung zur Frage";
+  img.loading = "lazy";
+
+  figure.appendChild(img);
+  return figure;
+}
+
+
 function showCatalog() {
   appState.screen = "catalog";
   pageTitle.textContent = "Fragenkatalog";
@@ -371,6 +403,9 @@ function renderCatalog(query) {
     answer.innerHTML = `<strong>Richtige Antwort:</strong><br>${highlightText(q.correctAnswer, terms)}`;
 
     details.appendChild(summary);
+    if (q.image && q.image.src) {
+      details.appendChild(createCatalogImage(q));
+    }
     details.appendChild(answer);
     fragment.appendChild(details);
   });

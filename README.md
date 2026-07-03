@@ -43,3 +43,15 @@ http://localhost:8080
 ```
 
 Direktes Öffnen der `index.html` per Doppelklick kann je nach Browser die Datei `questions.json` blockieren.
+
+
+## Version 4 - Bildfragen
+
+Diese Version basiert auf Version 3 und ergänzt Bildfragen für Gefahrenzettel und Brandklassen.
+
+Wichtig:
+- Die eigentlichen Bilddateien müssen unter `assets/questions/` abgelegt werden.
+- Die Dateinamen müssen exakt zu `questions.json` und `service-worker.js` passen.
+- Die Gefahrgut-Bilder werden als `.jpg` referenziert.
+- Die Brandklassen-Bilder werden als `.avif` referenziert.
+- Die Datei `gefahrgutklasse-7d-radioaktiv.jpg` ist in der übermittelten Dateiliste nicht enthalten und wurde daher nicht eingebaut.

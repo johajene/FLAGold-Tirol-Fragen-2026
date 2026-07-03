@@ -424,28 +424,325 @@
           "points": 1
         },
         {
-          "id": "33",
-          "question": "Dieser Gefahrenzettel weist auf welche Gefahr hin?",
+          "id": "33-01",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-1-explosive-stoffe.jpg",
+            "alt": "Gefahrgutklasse 1: explosive Stoffe"
+          },
           "options": [
-            "Radioaktive Stoffe.",
-            "Giftige Stoffe mit akuter Gesundheitsgefahr.",
-            "Entzündbare feste Stoffe.",
-            "Entzündend (oxidierend) wirkende Stoffe"
+            "Gefahrgutklasse 1: explosive Stoffe",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten",
+            "Gefahrgutklasse 2.1: brennbare Gase",
+            "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe"
           ],
-          "correctAnswer": "Entzündend (oxidierend) wirkende Stoffe",
+          "correctAnswer": "Gefahrgutklasse 1: explosive Stoffe",
           "explanation": " ",
           "points": 1
         },
         {
-          "id": "34",
-          "question": "Dieser Gefahrenzettel weist auf welche Gefahr hin?",
+          "id": "33-02",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-2-1-brennbare-gase.jpg",
+            "alt": "Gefahrgutklasse 2.1: brennbare Gase"
+          },
           "options": [
-            "Explosive Stoffe.",
-            "Ätzende Stoffe.",
-            "Organische Peroxide.",
-            "Stoffe die bei Berührung mit Wasser entzündbare Gase bilden"
+            "Gefahrgutklasse 2.1: brennbare Gase",
+            "Gefahrgutklasse 2.2: nicht brennbare Gase",
+            "Gefahrgutklasse 2.3: giftige Gase",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten"
           ],
-          "correctAnswer": "Stoffe die bei Berührung mit Wasser entzündbare Gase bilden",
+          "correctAnswer": "Gefahrgutklasse 2.1: brennbare Gase",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-03",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-2-2-nicht-brennbare-gase.jpg",
+            "alt": "Gefahrgutklasse 2.2: nicht brennbare Gase"
+          },
+          "options": [
+            "Gefahrgutklasse 2.2: nicht brennbare Gase",
+            "Gefahrgutklasse 2.1: brennbare Gase",
+            "Gefahrgutklasse 2.3: giftige Gase",
+            "Gefahrgutklasse 6.1: giftige Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 2.2: nicht brennbare Gase",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-04",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-2-3-giftige-gase.jpg",
+            "alt": "Gefahrgutklasse 2.3: giftige Gase"
+          },
+          "options": [
+            "Gefahrgutklasse 2.3: giftige Gase",
+            "Gefahrgutklasse 2.2: nicht brennbare Gase",
+            "Gefahrgutklasse 6.1: giftige Stoffe",
+            "Gefahrgutklasse 6.2: ansteckungsgefährliche Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 2.3: giftige Gase",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-05",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-3-entzuendbare-fluessigkeiten.jpg",
+            "alt": "Gefahrgutklasse 3: entzündbare Flüssigkeiten"
+          },
+          "options": [
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten",
+            "Gefahrgutklasse 2.1: brennbare Gase",
+            "Gefahrgutklasse 4.1: entzündbare feste Stoffe",
+            "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 3: entzündbare Flüssigkeiten",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-06",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-4-1-entzuendbare-feste-stoffe.jpg",
+            "alt": "Gefahrgutklasse 4.1: entzündbare feste Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 4.1: entzündbare feste Stoffe",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten",
+            "Gefahrgutklasse 4.2: selbstentzündliche Stoffe",
+            "Gefahrgutklasse 4.3: bildet entzündbare Gase bei Wasserberührung"
+          ],
+          "correctAnswer": "Gefahrgutklasse 4.1: entzündbare feste Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-07",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-4-2-selbstentzuendliche-stoffe.jpg",
+            "alt": "Gefahrgutklasse 4.2: selbstentzündliche Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 4.2: selbstentzündliche Stoffe",
+            "Gefahrgutklasse 4.1: entzündbare feste Stoffe",
+            "Gefahrgutklasse 4.3: bildet entzündbare Gase bei Wasserberührung",
+            "Gefahrgutklasse 5.2: organische Peroxide"
+          ],
+          "correctAnswer": "Gefahrgutklasse 4.2: selbstentzündliche Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-08",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-4-3-wasserreaktiv.jpg",
+            "alt": "Gefahrgutklasse 4.3: bildet entzündbare Gase bei Wasserberührung"
+          },
+          "options": [
+            "Gefahrgutklasse 4.3: bildet entzündbare Gase bei Wasserberührung",
+            "Gefahrgutklasse 4.1: entzündbare feste Stoffe",
+            "Gefahrgutklasse 4.2: selbstentzündliche Stoffe",
+            "Gefahrgutklasse 9A: Lithium Batterien"
+          ],
+          "correctAnswer": "Gefahrgutklasse 4.3: bildet entzündbare Gase bei Wasserberührung",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-09",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-5-1-oxidierend.jpg",
+            "alt": "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten",
+            "Gefahrgutklasse 5.2: organische Peroxide",
+            "Gefahrgutklasse 8: ätzende Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-10",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-5-2-organische-peroxide.jpg",
+            "alt": "Gefahrgutklasse 5.2: organische Peroxide"
+          },
+          "options": [
+            "Gefahrgutklasse 5.2: organische Peroxide",
+            "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe",
+            "Gefahrgutklasse 4.2: selbstentzündliche Stoffe",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten"
+          ],
+          "correctAnswer": "Gefahrgutklasse 5.2: organische Peroxide",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-11",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-6-1-giftige-stoffe.jpg",
+            "alt": "Gefahrgutklasse 6.1: giftige Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 6.1: giftige Stoffe",
+            "Gefahrgutklasse 2.3: giftige Gase",
+            "Gefahrgutklasse 6.2: ansteckungsgefährliche Stoffe",
+            "Gefahrgutklasse 8: ätzende Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 6.1: giftige Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-12",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-6-2-ansteckungsgefaehrliche-stoffe.jpg",
+            "alt": "Gefahrgutklasse 6.2: ansteckungsgefährliche Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 6.2: ansteckungsgefährliche Stoffe",
+            "Gefahrgutklasse 6.1: giftige Stoffe",
+            "Gefahrgutklasse 8: ätzende Stoffe",
+            "Gefahrgutklasse 7E: spaltbare Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 6.2: ansteckungsgefährliche Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-13",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-7a-radioaktiv-kategorie-i.jpg",
+            "alt": "Gefahrgutklasse 7A: radioaktiv Kategorie I"
+          },
+          "options": [
+            "Gefahrgutklasse 7A: radioaktiv Kategorie I",
+            "Gefahrgutklasse 7B: radioaktiv Kategorie II",
+            "Gefahrgutklasse 7C: radioaktiv Kategorie III",
+            "Gefahrgutklasse 7E: spaltbare Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 7A: radioaktiv Kategorie I",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-14",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-7b-radioaktiv-kategorie-ii.jpg",
+            "alt": "Gefahrgutklasse 7B: radioaktiv Kategorie II"
+          },
+          "options": [
+            "Gefahrgutklasse 7B: radioaktiv Kategorie II",
+            "Gefahrgutklasse 7A: radioaktiv Kategorie I",
+            "Gefahrgutklasse 7C: radioaktiv Kategorie III",
+            "Gefahrgutklasse 7E: spaltbare Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 7B: radioaktiv Kategorie II",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-15",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-7c-radioaktiv-kategorie-iii.jpg",
+            "alt": "Gefahrgutklasse 7C: radioaktiv Kategorie III"
+          },
+          "options": [
+            "Gefahrgutklasse 7C: radioaktiv Kategorie III",
+            "Gefahrgutklasse 7A: radioaktiv Kategorie I",
+            "Gefahrgutklasse 7B: radioaktiv Kategorie II",
+            "Gefahrgutklasse 7E: spaltbare Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 7C: radioaktiv Kategorie III",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-16",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-7e-spaltbare-stoffe.jpg",
+            "alt": "Gefahrgutklasse 7E: spaltbare Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 7E: spaltbare Stoffe",
+            "Gefahrgutklasse 7A: radioaktiv Kategorie I",
+            "Gefahrgutklasse 7B: radioaktiv Kategorie II",
+            "Gefahrgutklasse 7C: radioaktiv Kategorie III"
+          ],
+          "correctAnswer": "Gefahrgutklasse 7E: spaltbare Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-17",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-8-aetzende-stoffe.jpg",
+            "alt": "Gefahrgutklasse 8: ätzende Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 8: ätzende Stoffe",
+            "Gefahrgutklasse 6.1: giftige Stoffe",
+            "Gefahrgutklasse 5.1: entzündend / oxidierend wirkende Stoffe",
+            "Gefahrgutklasse 9: sonstige gefährliche Stoffe"
+          ],
+          "correctAnswer": "Gefahrgutklasse 8: ätzende Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-18",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-9-sonstige-gefaehrliche-stoffe.jpg",
+            "alt": "Gefahrgutklasse 9: sonstige gefährliche Stoffe"
+          },
+          "options": [
+            "Gefahrgutklasse 9: sonstige gefährliche Stoffe",
+            "Gefahrgutklasse 8: ätzende Stoffe",
+            "Gefahrgutklasse 9A: Lithium Batterien",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten"
+          ],
+          "correctAnswer": "Gefahrgutklasse 9: sonstige gefährliche Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "33-19",
+          "question": "Welche Gefahrgutklasse ist auf dem abgebildeten Gefahrenzettel dargestellt?",
+          "image": {
+            "src": "assets/questions/gefahrgutklasse-9a-lithium-batterien.jpg",
+            "alt": "Gefahrgutklasse 9A: Lithium Batterien"
+          },
+          "options": [
+            "Gefahrgutklasse 9A: Lithium Batterien",
+            "Gefahrgutklasse 9: sonstige gefährliche Stoffe",
+            "Gefahrgutklasse 4.3: bildet entzündbare Gase bei Wasserberührung",
+            "Gefahrgutklasse 3: entzündbare Flüssigkeiten"
+          ],
+          "correctAnswer": "Gefahrgutklasse 9A: Lithium Batterien",
           "explanation": " ",
           "points": 1
         },
@@ -2751,15 +3048,87 @@
           "points": 1
         },
         {
-          "id": "212",
-          "question": "Benennen sie die folgende Abbildung der Brandklassen:",
+          "id": "212-01",
+          "question": "Welche Brandklasse ist auf der abgebildeten Kennzeichnung dargestellt?",
+          "image": {
+            "src": "assets/questions/brandklasse-a.avif",
+            "alt": "Brandklasse A - Brände fester Stoffe"
+          },
           "options": [
-            "Brandklasse D - Brände von Metallen.",
-            "Brandklasse B - Brände flüssiger oder flüssig werdender Stoffe.",
-            "Brandklasse A - Brände fester Stoffe.",
-            "Brandklasse F - Brände von Speiseölen/ -fetten in Frittier - und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten ACHTUNG: Es können alle Brandklassen abgefragt werden!"
+            "Brandklasse A - Brände fester Stoffe",
+            "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen",
+            "Brandklasse C - Brände von Gasen",
+            "Brandklasse D - Brände von Metallen"
           ],
-          "correctAnswer": "Brandklasse F - Brände von Speiseölen/ -fetten in Frittier - und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten ACHTUNG: Es können alle Brandklassen abgefragt werden!",
+          "correctAnswer": "Brandklasse A - Brände fester Stoffe",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "212-02",
+          "question": "Welche Brandklasse ist auf der abgebildeten Kennzeichnung dargestellt?",
+          "image": {
+            "src": "assets/questions/brandklasse-b.avif",
+            "alt": "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen"
+          },
+          "options": [
+            "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen",
+            "Brandklasse A - Brände fester Stoffe",
+            "Brandklasse C - Brände von Gasen",
+            "Brandklasse F - Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten"
+          ],
+          "correctAnswer": "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "212-03",
+          "question": "Welche Brandklasse ist auf der abgebildeten Kennzeichnung dargestellt?",
+          "image": {
+            "src": "assets/questions/brandklasse-c.avif",
+            "alt": "Brandklasse C - Brände von Gasen"
+          },
+          "options": [
+            "Brandklasse C - Brände von Gasen",
+            "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen",
+            "Brandklasse D - Brände von Metallen",
+            "Brandklasse F - Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten"
+          ],
+          "correctAnswer": "Brandklasse C - Brände von Gasen",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "212-04",
+          "question": "Welche Brandklasse ist auf der abgebildeten Kennzeichnung dargestellt?",
+          "image": {
+            "src": "assets/questions/brandklasse-d.avif",
+            "alt": "Brandklasse D - Brände von Metallen"
+          },
+          "options": [
+            "Brandklasse D - Brände von Metallen",
+            "Brandklasse A - Brände fester Stoffe",
+            "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen",
+            "Brandklasse F - Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten"
+          ],
+          "correctAnswer": "Brandklasse D - Brände von Metallen",
+          "explanation": " ",
+          "points": 1
+        },
+        {
+          "id": "212-05",
+          "question": "Welche Brandklasse ist auf der abgebildeten Kennzeichnung dargestellt?",
+          "image": {
+            "src": "assets/questions/brandklasse-f.avif",
+            "alt": "Brandklasse F - Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten"
+          },
+          "options": [
+            "Brandklasse F - Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten",
+            "Brandklasse A - Brände fester Stoffe",
+            "Brandklasse B - Brände von flüssigen oder flüssig werdenden Stoffen",
+            "Brandklasse D - Brände von Metallen"
+          ],
+          "correctAnswer": "Brandklasse F - Brände von Speiseölen/-fetten in Frittier- und Fettbackgeräten und anderen Kücheneinrichtungen und -geräten",
           "explanation": " ",
           "points": 1
         },
